@@ -5,6 +5,12 @@
 //  Created by Can Dönmez on 08.03.21.
 //
 
+// kodun belli bolumunu bitirince gitgun a atmak icin
+//git add .
+//git commit -m "buraya comment yaz"
+//git push origin master
+//bunlari terminalde yazinca kodlari github da master branch icine push ediyor. oradan da bitrise zaten otomatik aliyor. 
+
 import Foundation
 
 class Model {
@@ -13,7 +19,8 @@ class Model {
         // Create a URL Object
         let url = URL(string: Constants.API_URL)
         //url in bos olmamasi icin guard yapiyoruz. bos ise else devreye girip return yapacak
-        guard url != nil else{
+        guard url != nil
+        else{
             return
         }
         
@@ -32,9 +39,25 @@ class Model {
             if error != nil || data == nil{
                 return
             }
+            do{
+                
+                // Parsing the data into video objects
+                let decoder = JSONDecoder()
+                //tum video.swift i kodladik en son da gelip buraya bir decoder actik. o datalari buraya cekecegiz
+                
+                decoder.dateDecodingStrategy = .iso8601
+                //Date decode ederken standart format olarak bu iso yu kullanacak onu tanimladik
+                
+                let response = try decoder.decode(Response.self, from: data!)
+                
+                dump(response)
+            }
+
+            catch{
+                
+            }
             
-            // Parsing the data into video objects
-            
+ // do catch bir error kontrol sistemi. icinde try olmasinin sebebi de bu.
         
         }
         
