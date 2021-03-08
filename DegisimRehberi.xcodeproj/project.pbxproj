@@ -13,6 +13,9 @@
 		7734790C25F58BB700E53236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7734790A25F58BB700E53236 /* Main.storyboard */; };
 		7734790E25F58BBA00E53236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7734790D25F58BBA00E53236 /* Assets.xcassets */; };
 		7734791125F58BBA00E53236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7734790F25F58BBA00E53236 /* LaunchScreen.storyboard */; };
+		7734791A25F6ACC800E53236 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734791925F6ACC800E53236 /* Constants.swift */; };
+		7734791D25F6AEDA00E53236 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734791C25F6AEDA00E53236 /* Video.swift */; };
+		7734792025F6B11F00E53236 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734791F25F6B11F00E53236 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		7734790D25F58BBA00E53236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7734791025F58BBA00E53236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7734791225F58BBA00E53236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7734791925F6ACC800E53236 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7734791C25F6AEDA00E53236 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		7734791F25F6B11F00E53236 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +65,13 @@
 				7734790425F58BB700E53236 /* AppDelegate.swift */,
 				7734790625F58BB700E53236 /* SceneDelegate.swift */,
 				7734790825F58BB700E53236 /* ViewController.swift */,
+				7734791C25F6AEDA00E53236 /* Video.swift */,
+				7734791F25F6B11F00E53236 /* Model.swift */,
 				7734790A25F58BB700E53236 /* Main.storyboard */,
 				7734790D25F58BBA00E53236 /* Assets.xcassets */,
 				7734790F25F58BBA00E53236 /* LaunchScreen.storyboard */,
 				7734791225F58BBA00E53236 /* Info.plist */,
+				7734791925F6ACC800E53236 /* Constants.swift */,
 			);
 			path = DegisimRehberi;
 			sourceTree = "<group>";
@@ -140,6 +149,9 @@
 				7734790925F58BB700E53236 /* ViewController.swift in Sources */,
 				7734790525F58BB700E53236 /* AppDelegate.swift in Sources */,
 				7734790725F58BB700E53236 /* SceneDelegate.swift in Sources */,
+				7734792025F6B11F00E53236 /* Model.swift in Sources */,
+				7734791A25F6ACC800E53236 /* Constants.swift in Sources */,
+				7734791D25F6AEDA00E53236 /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
