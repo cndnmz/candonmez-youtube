@@ -56,6 +56,8 @@ class Model {
                 decoder.dateDecodingStrategy = .iso8601
                 //Date decode ederken standart format olarak bu iso yu kullanacak onu tanimladik
                 
+            
+                
                 let response = try decoder.decode(Response.self, from: data!)
                 
                 
