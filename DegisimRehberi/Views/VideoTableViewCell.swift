@@ -10,9 +10,7 @@ import UIKit
 class VideoTableViewCell: UITableViewCell {
 
     
-    
-    @IBOutlet weak var thumbnailImageView: UIImageView!
-    
+    @IBOutlet weak var ThumbnailImageView: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -63,7 +61,7 @@ class VideoTableViewCell: UITableViewCell {
             
             // Set the thumbnail imageview
             
-            self.thumbnailImageView.image = UIImage(data: cachedData)
+            self.ThumbnailImageView.image = UIImage(data: cachedData)
         }
         
         
@@ -94,7 +92,7 @@ class VideoTableViewCell: UITableViewCell {
                 
                 //Set the image view
                 DispatchQueue.main.async {
-                    self.thumbnailImageView.image = image
+                    self.ThumbnailImageView.image = image
                 }
                 
             }

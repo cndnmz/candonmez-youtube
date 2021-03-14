@@ -9,9 +9,9 @@ import Foundation
 
 struct Response: Decodable {
     
-    var items:[Video]?
+    var items: [Video]?
     
-    enum CodingKeys: String, CodingKey {
+    enum CodingKeys:String, CodingKey {
         
         case items
         

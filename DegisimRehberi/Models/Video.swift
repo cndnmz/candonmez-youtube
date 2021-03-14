@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Video : Decodable {
+struct Video:Decodable {
     //Decodable diyerek bu structure json dan decode edecek ve init ile tanimladigimiz initializer icine bu bilgiyi parse edecek.
     //init icinde ise bunu nasil yapcagini tanimlayacagiz
  
-    var videoID = ""
+    var videoId = ""
     var title = ""
     var description = ""
     var thumbnail = ""
@@ -22,21 +22,24 @@ struct Video : Decodable {
         
         //published de tanimd yapmak zorunda kaldik ve bu String oldugu icin coding keys i de string yaptik
         
+        case snippet
+        case thumbnails
+        case high
+        case resourceId
+        
         case published = "publishedAt"
         case title
         //key adi json da ve variable da yukarida yani ayni oldugu icin bir daha tanim yapmadik
         case description
         case thumbnail = " url"
         //url thumbnails altinda high keyi altinda bu nedenle onlari da tanimlamaliyiz
-        case videoID
+        case videoId
         //videID de resourceID altinda onu da tanimlayacagiz
-        case resourceID
+       
         
         // all the keys we are interested in is under snippet key
         
-        case snippet
-        case thumbnails
-        case high
+        
         
         
     }
@@ -63,17 +66,17 @@ struct Video : Decodable {
         
         //Parse thumbnails
         
-        let thumbnailsContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .thumbnails)
+        let thumbnailContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .thumbnails)
         
-        let highContainer = try thumbnailsContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .high)
+        let highContainer = try thumbnailContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .high)
         
-        self.thumbnail = try highContainer.decode(String.self, forKey: .thumbnails)
+        self.thumbnail = try highContainer.decode(String.self, forKey: .thumbnail)
         
         //Parse videoID
         
-        let resourceIDContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .resourceID)
+        let resourceIdContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .resourceId)
         
-        self.videoID = try resourceIDContainer.decode(String.self, forKey: .videoID)
+        self.videoId = try resourceIdContainer.decode(String.self, forKey: .videoId)
         
     }
     

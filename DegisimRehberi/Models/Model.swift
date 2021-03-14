@@ -22,13 +22,12 @@ class Model {
     var delegate:ModelDelegate?
     
     
-    func getVideos(){
+    func getVideos() {
         
         // Create a URL Object
         let url = URL(string: Constants.API_URL)
         //url in bos olmamasi icin guard yapiyoruz. bos ise else devreye girip return yapacak
-        guard url != nil
-        else{
+        guard url != nil else{
             return
         }
         
@@ -64,7 +63,7 @@ class Model {
                 if response.items != nil {
                     
                     DispatchQueue.main.async {
-                        // Call the "videosReturned" method of the delegate
+                        // Call the "videosFetched" method of the delegate
                             self.delegate?.videosFetched(response.items!)
                     }
                 
