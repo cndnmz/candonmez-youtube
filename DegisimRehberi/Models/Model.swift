@@ -48,6 +48,7 @@ class Model {
             }
             do{
                 
+                
                 // Parsing the data into video objects
                 let decoder = JSONDecoder()
                 //tum video.swift i kodladik en son da gelip buraya bir decoder actik. o datalari buraya cekecegiz
@@ -55,9 +56,13 @@ class Model {
                 decoder.dateDecodingStrategy = .iso8601
                 //Date decode ederken standart format olarak bu iso yu kullanacak onu tanimladik
                 
-            
+                //dump(data)
+                
                 
                 let response = try decoder.decode(Response.self, from: data!)
+                
+                //komut alanina po response yazip icerigi gorebildim adim adim modda debug yaparken
+                
                 
                 
                 if response.items != nil {
@@ -66,6 +71,8 @@ class Model {
                         // Call the "videosFetched" method of the delegate
                             self.delegate?.videosFetched(response.items!)
                     }
+                    
+                
                 
                
                 }
@@ -73,7 +80,8 @@ class Model {
                 //dump(response)
             }
 
-            catch{
+            catch {
+                //print("ppp")
                 
             }
             

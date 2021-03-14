@@ -31,7 +31,7 @@ struct Video:Decodable {
         case title
         //key adi json da ve variable da yukarida yani ayni oldugu icin bir daha tanim yapmadik
         case description
-        case thumbnail = " url"
+        case thumbnail = "url"
         //url thumbnails altinda high keyi altinda bu nedenle onlari da tanimlamaliyiz
         case videoId
         //videID de resourceID altinda onu da tanimlayacagiz

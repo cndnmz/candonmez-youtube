@@ -17,6 +17,10 @@
 		7734791D25F6AEDA00E53236 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734791C25F6AEDA00E53236 /* Video.swift */; };
 		7734792025F6B11F00E53236 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734791F25F6B11F00E53236 /* Model.swift */; };
 		7734792325F6C9A100E53236 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734792225F6C9A100E53236 /* Response.swift */; };
+		7734793025FD4F2700E53236 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734792F25FD4F2700E53236 /* VideoTableViewCell.swift */; };
+		773D1C2825FEBC4400358017 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D1C2725FEBC4400358017 /* DetailViewController.swift */; };
+		773D1C2C25FEC38400358017 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773D1C2B25FEC38400358017 /* WebKit.framework */; };
+		77E77DAD25FD6AEE00D3CDF2 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E77DAC25FD6AEE00D3CDF2 /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		7734791C25F6AEDA00E53236 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		7734791F25F6B11F00E53236 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		7734792225F6C9A100E53236 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		7734792F25FD4F2700E53236 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		773D1C2725FEBC4400358017 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		773D1C2B25FEC38400358017 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		77E77DAC25FD6AEE00D3CDF2 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773D1C2C25FEC38400358017 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,7 @@
 			children = (
 				7734790325F58BB700E53236 /* DegisimRehberi */,
 				7734790225F58BB700E53236 /* Products */,
+				773D1C2A25FEC38400358017 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,17 +76,68 @@
 			children = (
 				7734790425F58BB700E53236 /* AppDelegate.swift */,
 				7734790625F58BB700E53236 /* SceneDelegate.swift */,
-				7734790825F58BB700E53236 /* ViewController.swift */,
-				7734791C25F6AEDA00E53236 /* Video.swift */,
-				7734792225F6C9A100E53236 /* Response.swift */,
-				7734791F25F6B11F00E53236 /* Model.swift */,
-				7734790A25F58BB700E53236 /* Main.storyboard */,
+				7734792D25FD4E4C00E53236 /* Helpers */,
+				7734792C25FD4E4400E53236 /* Storyboards */,
+				7734792B25FD4E3F00E53236 /* Models */,
+				7734792A25FD4E2A00E53236 /* Views */,
+				7734792925FD4DE900E53236 /* View Controllers */,
 				7734790D25F58BBA00E53236 /* Assets.xcassets */,
-				7734790F25F58BBA00E53236 /* LaunchScreen.storyboard */,
 				7734791225F58BBA00E53236 /* Info.plist */,
-				7734791925F6ACC800E53236 /* Constants.swift */,
 			);
 			path = DegisimRehberi;
+			sourceTree = "<group>";
+		};
+		7734792925FD4DE900E53236 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7734790825F58BB700E53236 /* ViewController.swift */,
+				773D1C2725FEBC4400358017 /* DetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7734792A25FD4E2A00E53236 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7734792F25FD4F2700E53236 /* VideoTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7734792B25FD4E3F00E53236 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7734791C25F6AEDA00E53236 /* Video.swift */,
+				7734791F25F6B11F00E53236 /* Model.swift */,
+				7734792225F6C9A100E53236 /* Response.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7734792C25FD4E4400E53236 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7734790A25F58BB700E53236 /* Main.storyboard */,
+				7734790F25F58BBA00E53236 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7734792D25FD4E4C00E53236 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7734791925F6ACC800E53236 /* Constants.swift */,
+				77E77DAC25FD6AEE00D3CDF2 /* CacheManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		773D1C2A25FEC38400358017 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				773D1C2B25FEC38400358017 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,10 +211,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7734790925F58BB700E53236 /* ViewController.swift in Sources */,
+				77E77DAD25FD6AEE00D3CDF2 /* CacheManager.swift in Sources */,
 				7734790525F58BB700E53236 /* AppDelegate.swift in Sources */,
 				7734790725F58BB700E53236 /* SceneDelegate.swift in Sources */,
 				7734792025F6B11F00E53236 /* Model.swift in Sources */,
 				7734791A25F6ACC800E53236 /* Constants.swift in Sources */,
+				7734793025FD4F2700E53236 /* VideoTableViewCell.swift in Sources */,
+				773D1C2825FEBC4400358017 /* DetailViewController.swift in Sources */,
 				7734791D25F6AEDA00E53236 /* Video.swift in Sources */,
 				7734792325F6C9A100E53236 /* Response.swift in Sources */,
 			);
@@ -232,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -287,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -303,8 +367,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CTY7B6C782;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DegisimRehberi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,8 +387,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CTY7B6C782;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DegisimRehberi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
